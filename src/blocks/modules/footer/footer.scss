@@ -1,0 +1,119 @@
+.footer {
+  margin-top: 199px;
+  border-top: 1px solid #000;
+  margin-bottom: 65px;
+  &-box {
+    margin-top: 67px;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-logo {
+    background-image: url(../../../img/logo/logo.svg);
+    width: 139px;
+    height: 22px;
+  }
+  &-item {
+    display: flex;
+    align-items: flex-end;
+    max-width: 756px;
+    justify-content: space-between;
+    &-nav {
+      
+      &__link {
+        text-decoration: none;
+        color: #000;
+        margin-left: 45px;
+      }
+    }
+  }
+  &-form {
+    margin-top: 38px;
+    max-width: 761px;
+    &__email {
+      height: 54px;
+      margin-bottom: 2px;
+      width: 532px;
+    }
+    &__text {
+      margin-bottom: 13px;
+    }
+    &__btn {
+      height: 58px;
+      width: 216px;
+      border: none;
+      color: #fff;
+      background-color: #302d31;
+      font-weight: 600;
+      font-size: 1.12rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+  &-info {
+    margin-top: 53px;
+    &__tel {
+      font-weight: 500;
+      font-size: 2.37rem;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+  &-social {
+    margin-top: 73px;
+    display: flex;
+    margin-left: 100px;
+    justify-content: space-between;
+    &__item {
+      display: block;
+      width: 51px;
+      height: 51px;
+      border-radius: 100%;
+      background-color: #000;
+      align-items: center;
+    }
+  }
+  .vk {
+    margin-top: 19px;
+    margin-left: 12px;
+  }
+  .inst {
+    margin: 16px;
+  }
+  .fc {
+    margin-top: 16px;
+    margin-left: 21px;
+  }
+}
+
+.box-copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 0.75rem;
+  }
+  &__copy {
+    margin-left: 2px;
+    margin-top: 29px;
+    font-size: 0.75rem;
+    }
+  }
+  &__text {
+    margin-top: 28px;
+    color: #a6a8a4;
+    font-size: 0.75rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #27300f;
+    opacity: 0.6;
+    transition: 0.3s ease;
+    &:hover {
+      color: #000000;
+      opacity: 1;
+    }
+  }
+}
