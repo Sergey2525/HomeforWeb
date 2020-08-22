@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 .wrapper {
-  max-width: 1430px;
+  width: 1430px;
   margin: 0 auto;
 }
 .title {
@@ -27,11 +27,11 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 850px;
+  max-width: 100%;
+  min-height: 850px;
 }
 .main {
-  max-width: 835px;
+  width: 835px;
   margin: 0 auto;
   margin-top: 173px;
   &-title {
@@ -66,14 +66,14 @@ body {
 }
 
 .section-form {
-  height: 400px;
+
 }
 
 .form {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   select {
     width: 325px;
     height: 60px;
@@ -84,8 +84,32 @@ body {
   }
 }
 
+.contant {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.area {
+  display: flex;
+  width: 484px;
+  border: 1px solid #000;
+  justify-content: space-between;
+}
+.area-text {
+  width: 241px;
+  text-align: center;
+}
+.area-input {
+  width: 241px;
+  height: 55px;
+  border: none;
+  border-left: 1px solid #000;
+  text-align: center;
+}
+
 .section-stock {
-  margin-top: 35px;
+  margin-top: 131px;
   &__text {
     font-weight: 400;
     font-size: 1rem;
@@ -94,18 +118,20 @@ body {
     margin: 0 auto;
     margin-top: 35px;
     line-height: 1.5;
+    overflow: hidden;
   }
 }
 
 .slider {
-  margin-top: 138px;
   display: flex;
   justify-content: space-between;
+  margin-top: 138px;
   &-child {
     width: 462px;
     height: 544px;
     border: 1px solid #302d32;
     overflow: hidden;
+    margin-right: 19px;
   }
   &-item {
     width: 100%;
@@ -295,7 +321,7 @@ body {
     font-weight: 400;
     font-size: 1rem;
     text-align: center;
-    max-width: 690px;
+    width: 690px;
     margin: 0 auto;
     margin-top: 25px;
     line-height: 1.5;
@@ -409,3 +435,107 @@ body {
     }
   }
 }
+
+.inlin {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  max-width: 880px;
+}
+
+
+datalist {
+  width: 360px;
+ display: flex;
+ justify-content: space-between;
+ }
+ 
+ #tickmarks option {
+ display: inline;
+ font-size: 1rem;
+ }
+ 
+ .range-style {
+   -webkit-appearance: none;
+   width: 360px;
+   height: 2px;
+   background: #e4e4e4;
+   outline: none;
+ }
+ 
+ .range-style::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   width: 12px;
+   height: 12px;
+   border: 1px solid #dae3ea;
+   background: white;
+   border-radius: 2px;
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+   transition: all 0.3s;
+ }
+
+ .but {
+   width: 460px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   margin-top: 36px;
+ }
+ .reset {
+   position: relative;
+   background: transparent;
+   font-weight: 400;
+   font-size: 1rem;
+   border: none;
+   padding-left: 49px;
+   outline: none;
+   cursor: pointer;
+   &::after {
+     content:"";
+     position: absolute;
+     background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVQYlWM00DWax8DAMIOBgeEUA3ZgxsDAkMEEVVQCFUAHZlC5GcwS4pJPGRgYHkIFQPRTqGKYoh6QbSCFDFBJZMXSyIpACliQrAIJgCRACkAArggEQG4kCiArRHYTzGS4B2FuRHE4Fjc/BSlEVwQDKIpBCpsZGBgm4QhwiGIGhgwAi/Im6H+tupwAAAAASUVORK5CYII=");
+     display: block;
+     width: 10px;
+     height: 10px;
+     left: 200px;
+     top: 24px;
+
+   }
+ }
+ .submit {
+   width: 222px;
+   height: 60px;
+   background-color: #302d32;
+   color: #fff;
+   font-weight: 600;
+   font-size: 1.12rem;
+   margin-left: 28px;
+   letter-spacing: 3px;
+   text-transform: uppercase;
+   cursor: pointer;
+ }
+
+ .slick-prev,.slick-next {
+   position: absolute;
+   background-color: transparent;
+   background-size: contain;
+   border: none;
+   top: -50px;
+   text-indent: -9999px;
+   background-repeat: no-repeat;
+   display: block;
+   width: 7px;
+   height: 12px;
+   outline: none;
+ }
+ .slick-prev {
+   right: 55px;
+   background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAlklEQVQYlW3PO2uCURCE4efzQhQEi5Q2KQMi3lAs8u8VixAQK+1sxEJtLCy0URaOcPLhWx12ZvbsFIPeyBu+8VUrzQv00cEqF6sY4xO/OL3EOqZoYYlLDENsYJaSC1xfq0L8Se85bvkBFezRTEf8I5LblOjiA5t8bbBLhmEyrPHIqxxwxyQZ/uLPnHOq0o4GZTGIjgscn1fjGUsRU5mrAAAAAElFTkSuQmCC");
+ }
+ .slick-next {
+   right: 5px;
+   background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAqklEQVQYlV3QsUqCcRSG8Z/WoIsgQml0CQriVehFOOSQS0RrQhcgOjsJzg1uTiIubt6AOIe0NrYlB74v/vqsz+Gc97yFdquzxRIz/Em4qd83vvGGB+zSgVus8YMpqnjHb8hiNrTHEM1sfSWVwQED1DDHXSqDLzyhjMW1DLpoYBWBcgp4QR8TfOYyNnyghxE2+SsljNHGa5b8/8+I/ohnHNPjIaOVKOJ0EQtnaqAcL+nLxPcAAAAASUVORK5CYII=");
+ }

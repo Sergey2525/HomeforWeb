@@ -25,6 +25,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="styles/main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -53,9 +54,8 @@
             <div class="form">
                 <select name="">
                     <option value="">Тип объекта</option>
-                    <option value="">Студия</option>
-                    <option value="">Квартира</option>
-                    <option value="">Дом</option>
+                    <option value="">Загородные дома</option>
+                    <option value="">Городские квартиры</option>
                 </select>
                 <select name="">
                     <option value="">Район</option>
@@ -63,12 +63,61 @@
                     <option value="">Ленинский</option>
                 </select>
             </div>
-            <div>
-                <p>Район</p>
-                <label for="">
-                    <span>тыс</span>
-                </label>
-            </div>
+
+            <form class="field" action="#">
+                <div class="contant">
+                    <div class="area">
+                        <p class="area-text">Площадь</p>
+                        <input class="area-input" placeholder="____________м2" type="number">
+                    </div>
+
+                    <div class="area">
+                        <p class="area-text">Цена за м2</p>
+                        <input class="area-input" placeholder="____________тыс." type="number">
+                    </div>
+                </div>
+                <div class="inlin">
+                    <div>
+                        <input class="range-style" list="tickmarks" type="range" min="0" max="1000" step="1" value="0">
+
+                        <datalist id="tickmarks">
+                            <option value="0" label="0">
+                            <option value="100">
+                            <option value="120" label="120">
+                            <option value="300">
+                            <option value="400">
+                            <option value="500">
+                            <option value="600">
+                            <option value="700">
+                            <option value="800">
+                            <option value="900">
+                            <option value="1000" label="1000">
+                        </datalist>
+                    </div>
+                    <div>
+                        <input class="range-style" list="tickmarks" type="range" min="0" max="98000" step="1" value="0">
+
+                        <datalist id="tickmarks">
+                            <option value="0" label="0">
+                            <option value="8000">
+                            <option value="9000">
+                            <option value="10350" label="10350">
+                            <option value="40000">
+                            <option value="49000">
+                            <option value="60000">
+                            <option value="70000">
+                            <option value="80000">
+                            <option value="90000">
+                            <option value="98000" label="98000">
+                        </datalist>
+                    </div>
+                </div>
+                <div class="but">
+                    <button class="reset" type="reset">Сбросить фильтры</button>
+                    <button class="submit" type="submit">Показать</button>
+                </div>
+            </form>
+
         </div>
     </section>
     <section class="section-stock">
@@ -79,6 +128,96 @@
                 Верх-Исетский район, Железнодорожный район, Чкаловский район.
             </p>
             <div class="slider">
+                <div class="slider-child">
+                    <div class="slider-item slider-berry">
+                        <div class="slider-text">
+                            <h3 class="slider-text__title">Дом&nbsp; “Брусника”</h3>
+                            <p class="slider-text__description">ул. Карла Маркса, 60, Екатеринбург</p>
+                            <button class="slider__btn"></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAA7klEQVQ4jc3TrQoCQRDA8b+HwWgRRFCsF/xAxGAxmPUVfACDySxmL5zdR/AdfAmLWBTEYjEaDLIyC8dwt+c2B4bdm939DezdFbqtHo4oARtZXgKvrK1BDhIDbclYal6QRUJgLhm6sDRII0dJJ6ahNMSGEwt+RHKxwANxYoEnkokZKAL6wOFHJIkd5GxUBM5A1QPQcTGGgbZAQy1WgDVQVPU3sAIeidrVGFkfpIEHwA04Sd6kppt+Q3fUsQPuUqsB06yNrn/NK/4PSt5RHZjIvCnjGHjKvCzjUO7LnvmuW8i8zhHQUY0WKc1n6nkP8AEUXzMj35RxNAAAAABJRU5ErkJggg=="
+                                alt="home">
+                            <p class="info-col__text">200 м2</p>
+                        </div>
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAyUlEQVQ4je3UrW5CQRCG4Qc4QSFITamEpoYckv54UttbwHELuLpeQW+kpo7gCKK6As8FYKqPaiZd2hME2ZNU8qrZ7OybbDLftG4n9x/o+mGDhTxeMU2dVVGTBCVeMkVlre4WR5dfWGeKxrg4HIr0nTJJlg1EQzyhj21ncHm1wjXe8J4pCT6xRwfP7QYPT3IWnUX/QUx2pPgBE/TSxOYwxww3uIusHVZBBDCys8sURe8o1dPj9EcAHzNF0ftLiKraTto22Ed/i43qGw2AGm4FUvD4AAAAAElFTkSuQmCC"
+                                alt="home">
+                            <p class="info-col__text">10 сот</p>
+                        </div>
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABOklEQVQ4jZXTPUtcURDG8d+uW6iIBNHKJqQIgkTFTjuxEbER0qTzG6SwFQVJE6z8EolaCYKFpZ0ivjSKhSAoiBAEBWOR+MKBWVjXXe+9A6c4DzN/njlnpjT0ZVjEJBYVi3lspooKpvEJV4H4kRM1hw/VSwINYhSXoa0XAE1F/UYlxFZ0F2zrFp/jPJTxH+dYKQDpx3WtkBz9RBfGQtvLAdqO2legf0FfC62cARlBH3rqQdV4ytHeR0zgEaXQnnFTyShMkQbta0DusIBZnOAUB9jPA5qJ8UjxB7/wHbu1SVnvkUaio+5+UQ/JA1rGAM6wGtpho8Ss1pKbY/wNJ01BWY7a0IuWgF1Vl7QoKMU92tMa4KhZ0nugTuzECiVnyVHDtvI4Go8vT2cJW80S33vsNHxpbb7F/XdobwMv4z86+8tO70oAAAAASUVORK5CYII="
+                                alt="home">
+                            <p class="info-col__text">с отделкой</p>
+                        </div>
+                    </div>
+                    <div class="prise">7 005 456 500 ₽</div>
+                </div>
+                <div class="slider-child">
+                    <div class="slider-item slider-trend">
+                        <div class="slider-text">
+                            <h3 class="slider-text__title">Дом&nbsp; “Трендис”</h3>
+                            <p class="slider-text__description">ул. Урицкого, 13, Екатеринбург</p>
+                            <button class="slider__btn"></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAA7klEQVQ4jc3TrQoCQRDA8b+HwWgRRFCsF/xAxGAxmPUVfACDySxmL5zdR/AdfAmLWBTEYjEaDLIyC8dwt+c2B4bdm939DezdFbqtHo4oARtZXgKvrK1BDhIDbclYal6QRUJgLhm6sDRII0dJJ6ahNMSGEwt+RHKxwANxYoEnkokZKAL6wOFHJIkd5GxUBM5A1QPQcTGGgbZAQy1WgDVQVPU3sAIeidrVGFkfpIEHwA04Sd6kppt+Q3fUsQPuUqsB06yNrn/NK/4PSt5RHZjIvCnjGHjKvCzjUO7LnvmuW8i8zhHQUY0WKc1n6nkP8AEUXzMj35RxNAAAAABJRU5ErkJggg=="
+                                alt="home">
+                            <p class="info-col__text">500 м2</p>
+                        </div>
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAyUlEQVQ4je3UrW5CQRCG4Qc4QSFITamEpoYckv54UttbwHELuLpeQW+kpo7gCKK6As8FYKqPaiZd2hME2ZNU8qrZ7OybbDLftG4n9x/o+mGDhTxeMU2dVVGTBCVeMkVlre4WR5dfWGeKxrg4HIr0nTJJlg1EQzyhj21ncHm1wjXe8J4pCT6xRwfP7QYPT3IWnUX/QUx2pPgBE/TSxOYwxww3uIusHVZBBDCys8sURe8o1dPj9EcAHzNF0ftLiKraTto22Ed/i43qGw2AGm4FUvD4AAAAAElFTkSuQmCC"
+                                alt="home">
+                            <p class="info-col__text">12 сот</p>
+                        </div>
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABOklEQVQ4jZXTPUtcURDG8d+uW6iIBNHKJqQIgkTFTjuxEbER0qTzG6SwFQVJE6z8EolaCYKFpZ0ivjSKhSAoiBAEBWOR+MKBWVjXXe+9A6c4DzN/njlnpjT0ZVjEJBYVi3lspooKpvEJV4H4kRM1hw/VSwINYhSXoa0XAE1F/UYlxFZ0F2zrFp/jPJTxH+dYKQDpx3WtkBz9RBfGQtvLAdqO2legf0FfC62cARlBH3rqQdV4ytHeR0zgEaXQnnFTyShMkQbta0DusIBZnOAUB9jPA5qJ8UjxB7/wHbu1SVnvkUaio+5+UQ/JA1rGAM6wGtpho8Ss1pKbY/wNJ01BWY7a0IuWgF1Vl7QoKMU92tMa4KhZ0nugTuzECiVnyVHDtvI4Go8vT2cJW80S33vsNHxpbb7F/XdobwMv4z86+8tO70oAAAAASUVORK5CYII="
+                                alt="home">
+                            <p class="info-col__text">с отделкой</p>
+                        </div>
+                    </div>
+                    <div class="prise">10 000 234 500 ₽</div>
+                </div>
+                <div class="slider-child">
+                    <div class="slider-item slider-panoramma">
+                        <div class="slider-text">
+                            <h3 class="slider-text__title">Дома&nbsp; “Панорома”</h3>
+                            <p class="slider-text__description">ул. Толстого, 340, Екатеринбург</p>
+                            <button class="slider__btn"></button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAA7klEQVQ4jc3TrQoCQRDA8b+HwWgRRFCsF/xAxGAxmPUVfACDySxmL5zdR/AdfAmLWBTEYjEaDLIyC8dwt+c2B4bdm939DezdFbqtHo4oARtZXgKvrK1BDhIDbclYal6QRUJgLhm6sDRII0dJJ6ahNMSGEwt+RHKxwANxYoEnkokZKAL6wOFHJIkd5GxUBM5A1QPQcTGGgbZAQy1WgDVQVPU3sAIeidrVGFkfpIEHwA04Sd6kppt+Q3fUsQPuUqsB06yNrn/NK/4PSt5RHZjIvCnjGHjKvCzjUO7LnvmuW8i8zhHQUY0WKc1n6nkP8AEUXzMj35RxNAAAAABJRU5ErkJggg=="
+                                alt="home">
+                            <p class="info-col__text">150 м2</p>
+                        </div>
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAyUlEQVQ4je3UrW5CQRCG4Qc4QSFITamEpoYckv54UttbwHELuLpeQW+kpo7gCKK6As8FYKqPaiZd2hME2ZNU8qrZ7OybbDLftG4n9x/o+mGDhTxeMU2dVVGTBCVeMkVlre4WR5dfWGeKxrg4HIr0nTJJlg1EQzyhj21ncHm1wjXe8J4pCT6xRwfP7QYPT3IWnUX/QUx2pPgBE/TSxOYwxww3uIusHVZBBDCys8sURe8o1dPj9EcAHzNF0ftLiKraTto22Ed/i43qGw2AGm4FUvD4AAAAAElFTkSuQmCC"
+                                alt="home">
+                            <p class="info-col__text">13 сот</p>
+                        </div>
+                        <div class="info-col">
+                            <img class="info-col__item"
+                                src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABOklEQVQ4jZXTPUtcURDG8d+uW6iIBNHKJqQIgkTFTjuxEbER0qTzG6SwFQVJE6z8EolaCYKFpZ0ivjSKhSAoiBAEBWOR+MKBWVjXXe+9A6c4DzN/njlnpjT0ZVjEJBYVi3lspooKpvEJV4H4kRM1hw/VSwINYhSXoa0XAE1F/UYlxFZ0F2zrFp/jPJTxH+dYKQDpx3WtkBz9RBfGQtvLAdqO2legf0FfC62cARlBH3rqQdV4ytHeR0zgEaXQnnFTyShMkQbta0DusIBZnOAUB9jPA5qJ8UjxB7/wHbu1SVnvkUaio+5+UQ/JA1rGAM6wGtpho8Ss1pKbY/wNJ01BWY7a0IuWgF1Vl7QoKMU92tMa4KhZ0nugTuzECiVnyVHDtvI4Go8vT2cJW80S33vsNHxpbb7F/XdobwMv4z86+8tO70oAAAAASUVORK5CYII="
+                                alt="home">
+                            <p class="info-col__text">с отделкой</p>
+                        </div>
+                    </div>
+                    <div class="prise">5 045 000 500 ₽</div>
+                </div>
                 <div class="slider-child">
                     <div class="slider-item slider-berry">
                         <div class="slider-text">
@@ -419,11 +558,76 @@
                     </p>
                     <button class="download-news">Смотреть больше</button>
                 </div>
+                <div class="slider-news">
+                    <p class="slider-news__date">02.04.2020</p>
+                    <p class="slider-news__text">
+                        В 2018 году происходили изменения в главном<br>
+                        законе долевого строительства ФЗ-214 для<br>
+                        решения сложной задачи – строительства 120<br>
+                        млн квадратных метров жилья нового качества<br>
+                        и усиления контроля
+                    </p>
+                    <button class="download-news">Смотреть больше</button>
+                </div>
+                <div class="slider-news">
+                    <p class="slider-news__date">02.04.2020</p>
+                    <p class="slider-news__text">
+                        В 2018 году происходили изменения в главном<br>
+                        законе долевого строительства ФЗ-214 для<br>
+                        решения сложной задачи – строительства 120<br>
+                        млн квадратных метров жилья нового качества<br>
+                        и усиления контроля
+                    </p>
+                    <button class="download-news">Смотреть больше</button>
+                </div>
+                <div class="slider-news">
+                    <p class="slider-news__date">02.04.2020</p>
+                    <p class="slider-news__text">
+                        В 2018 году происходили изменения в главном<br>
+                        законе долевого строительства ФЗ-214 для<br>
+                        решения сложной задачи – строительства 120<br>
+                        млн квадратных метров жилья нового качества<br>
+                        и усиления контроля
+                    </p>
+                    <button class="download-news">Смотреть больше</button>
+                </div>
             </div>
         </div>
     </section>
 
     @@include("../blocks/modules/footer/footer.html")
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.slider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
     <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>
 </body>
