@@ -79,6 +79,7 @@ body {
     width: 325px;
     height: 60px;
     align-items: center;
+    text-align-last: center;
   }
   option {
     justify-content: center;
@@ -96,6 +97,7 @@ body {
   width: 484px;
   border: 1px solid #000;
   justify-content: space-between;
+  align-items: center;
 }
 .area-text {
   width: 241px;
@@ -107,6 +109,10 @@ body {
   border: none;
   border-left: 1px solid #000;
   text-align: center;
+  &::-webkit-input-placeholder { color: #000;}
+  &:hover {
+    &::-webkit-input-placeholder { color: #827686;}
+  }
 }
 
 .section-stock {
@@ -141,6 +147,7 @@ body {
     background-size: cover;
     background-position: center;
     background-size: cover;
+    transition: 0.3s ease;
     &:hover {
       width: 105%;
     }
@@ -237,6 +244,10 @@ body {
     background-size: cover;
     background-position: center;
     background-size: cover;
+    transition: 0.3s ease;
+    &:hover {
+      width: 105%;
+    }
   }
   &-gukovka {
     background-image: url(../img/section/image1.png);
@@ -490,7 +501,9 @@ datalist {
    background-position: center;
    cursor: pointer;
    transition: all 0.3s;
+   background: #000;
  }
+ 
 
  .but {
    width: 460px;
