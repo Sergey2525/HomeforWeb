@@ -284,6 +284,10 @@ body {
       left: 362px;
       bottom: 11px;
       border: none;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: #827686;
+      }
   }
 }
 
