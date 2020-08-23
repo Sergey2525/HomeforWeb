@@ -66,52 +66,55 @@
 
             <form class="field" action="#">
                 <div class="contant">
-                    <div class="area">
-                        <p class="area-text">Площадь</p>
-                        <input class="area-input" placeholder="____________м2" type="number">
-                    </div>
-
-                    <div class="area">
-                        <p class="area-text">Цена за м2</p>
-                        <input class="area-input" placeholder="____________тыс." type="number">
-                    </div>
-                </div>
-                <div class="inlin">
                     <div>
-                        <input class="range-style" list="tickmarks" type="range" min="0" max="1000" step="1" value="0">
+                        <div class="area">
+                            <p class="area-text">Площадь</p>
+                            <input class="area-input" placeholder="____________м2" type="number">
+                        </div>
+                        <div class="inlin">
+                            <input class="range-style" list="tickmarks" type="range" min="0" max="1000" step="1"
+                                value="0">
 
-                        <datalist id="tickmarks">
-                            <option value="0" label="0">
-                            <option value="100">
-                            <option value="120" label="120">
-                            <option value="300">
-                            <option value="400">
-                            <option value="500">
-                            <option value="600">
-                            <option value="700">
-                            <option value="800">
-                            <option value="900">
-                            <option value="1000" label="1000">
-                        </datalist>
+                            <datalist id="tickmarks">
+                                <option value="0" label="0">
+                                <option value="100">
+                                <option value="200">
+                                <option value="300">
+                                <option value="120" label="120">
+                                <option value="500">
+                                <option value="600">
+                                <option value="700">
+                                <option value="800">
+                                <option value="900">
+                                <option value="1000" label="1000">
+                            </datalist>
+                        </div>
                     </div>
                     <div>
-                        <input class="range-style" list="tickmarks" type="range" min="0" max="98000" step="1" value="0">
-
-                        <datalist id="tickmarks">
-                            <option value="0" label="0">
-                            <option value="8000">
-                            <option value="9000">
-                            <option value="10350" label="10350">
-                            <option value="40000">
-                            <option value="49000">
-                            <option value="60000">
-                            <option value="70000">
-                            <option value="80000">
-                            <option value="90000">
-                            <option value="98000" label="98000">
-                        </datalist>
+                        <div class="area">
+                            <p class="area-text">Цена за м2</p>
+                            <input class="area-input" placeholder="____________тыс." type="number">
+                        </div>
+                        <div class="inlin">
+                            <input class="range-style" list="tickmarks" type="range" min="0" max="98000" step="1" value="0">
+    
+                            <datalist id="tickmarks">
+                                <option value="0" label="0">
+                                <option value="8000">
+                                <option value="9000">
+                                <option value="10000">
+                                <option value="10350" label="10350">
+                                <option value="49000">
+                                <option value="60000">
+                                <option value="70000">
+                                <option value="80000">
+                                <option value="90000">
+                                <option value="98000" label="98000">
+                            </datalist>
+                        </div>
                     </div>
                 </div>
+               
                 <div class="but">
                     <button class="reset" type="reset">Сбросить фильтры</button>
                     <button class="submit" type="submit">Показать</button>
@@ -473,8 +476,8 @@
             <h2 class="title">Генплан</h2>
             <p class="section-stock__text section-plan__text">
                 На генплане вы можете посмотреть территорию покупки. В поселке все предусмотрено.<br>
-                 Здесь проведены необходимые коммуникации.Это место влюбляет в себя.
-                
+                Здесь проведены необходимые коммуникации.Это место влюбляет в себя.
+
             </p>
             <div class="choice">
                 <a class="click">Загородные дома</a>
@@ -610,14 +613,14 @@
             slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 600,
+                    breakpoint: 992,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 576,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1

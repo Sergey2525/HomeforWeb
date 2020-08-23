@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 .wrapper {
-  width: 1430px;
+  max-width: 1430px;
   margin: 0 auto;
 }
 .title {
@@ -29,11 +29,20 @@ body {
   background-repeat: no-repeat;
   max-width: 100%;
   min-height: 850px;
+  @media (max-width: 576px) {
+    min-height: 600px;
+  }
+  @media (max-width: 576px) {
+    min-height: 450px;
+  }
 }
 .main {
-  width: 835px;
+  max-width: 835px;
   margin: 0 auto;
   margin-top: 173px;
+  @media (max-width: 576px) {
+    margin-top: 83px;
+  }
   &-title {
     color: #ffffff;
     font-size: 60px;
@@ -41,6 +50,12 @@ body {
     line-height: 70px;
     max-width: 829px;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 35px;
+      max-width: 538px;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
   &-text {
     max-width: 530px;
@@ -80,6 +95,10 @@ body {
     height: 60px;
     align-items: center;
     text-align-last: center;
+    outline: none;
+    @media (max-width: 576px) {
+      width: 243px;
+    }
   }
   option {
     justify-content: center;
@@ -91,6 +110,10 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   justify-content: space-between;
+  @media (max-width: 990px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .area {
   display: flex;
@@ -106,6 +129,7 @@ body {
 .area-input {
   width: 241px;
   height: 55px;
+  outline: none;
   border: none;
   border-left: 1px solid #000;
   text-align: center;
@@ -117,6 +141,9 @@ body {
 
 .section-stock {
   margin-top: 131px;
+  @media (max-width: 576px) {
+    margin-top: 60px;
+  }
   &__text {
     font-weight: 400;
     font-size: 1rem;
@@ -126,6 +153,9 @@ body {
     margin-top: 35px;
     line-height: 1.5;
     overflow: hidden;
+    @media (max-width: 576px) {
+      max-width: 479px;
+    }
   }
 }
 
@@ -133,6 +163,13 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 138px;
+  @media (max-width: 1200px) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 70px;
+  }
   &-child {
     width: 462px;
     height: 544px;
@@ -210,6 +247,9 @@ body {
     &__text {
       margin-top: 35px;
       margin-left: 16px;
+      @media (max-width: 768px) {
+        margin-left: 1px;
+      }
     }
   }
 }
@@ -224,12 +264,18 @@ body {
 
 .section-catalog {
   margin-top: 150px;
+  @media (max-width: 576px) {
+    margin-top: 70px;
+  }
 }
 .catalog {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 83px;
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+  }
   &-child {
     width: 462px;
     height: 544px;
@@ -338,6 +384,9 @@ body {
 
 .section-plan {
   margin-top: 151px;
+  @media (max-width: 576px) {
+    margin-top: 70px;
+  }
   &__text {
     font-weight: 400;
     font-size: 1rem;
@@ -371,6 +420,9 @@ body {
     margin-left: 100px;
     margin-right: 16px;
     transition: 0.3s ease;
+    @media (max-width: 576px) {
+      margin-left: 12px;
+    }
     &:hover {
       color: #827685;
     }
@@ -383,11 +435,17 @@ body {
     height: 25px;
     background-color: black;
     left: 383px;
+    @media (max-width: 576px) {
+      left: 250px;
+    }
   }
 }
 
 .section-about {
   margin-top: 152px;
+  @media (max-width: 576px) {
+    margin-top: 70px;
+  }
 }
 .about-cart {
   display: flex;
@@ -395,6 +453,12 @@ body {
   margin: 0 auto;
   margin-top: 82px;
   width: 1228px;
+  @media (max-width: 992px) {
+    width: 990px;
+  }
+  @media (max-width: 768px) {
+    width: 768px;
+  }
 }
 .advanced {
   text-align: center;
@@ -416,6 +480,9 @@ body {
 
 .section-news {
   margin-top: 175px;
+  @media (max-width: 576px) {
+    margin-top: 70px;
+  }
 }
 .slider-news {
     width: 461px;
@@ -429,6 +496,9 @@ body {
       font-size: 0.75rem;
       margin-top: 171px;
       margin-left: 29px;
+      @media (max-width: 990px) {
+        margin-top: 70px;
+      }
     }
     &__text {
       font-size: 1rem;
@@ -463,16 +533,16 @@ body {
 }
 
 .inlin {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  margin-left: 50px;
   margin-top: 20px;
-  max-width: 880px;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 
 
 datalist {
-  width: 360px;
+  width: 385px;
  display: flex;
  justify-content: space-between;
  }
@@ -484,7 +554,7 @@ datalist {
  
  .range-style {
    -webkit-appearance: none;
-   width: 360px;
+   width: 366px;
    height: 2px;
    background: #e4e4e4;
    outline: none; 
