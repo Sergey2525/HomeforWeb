@@ -21,6 +21,9 @@ body {
   font-weight: bold;
   font-size: 2.5rem;
   text-align: center;
+  @media (max-width: 320px) {
+    font-size: 1.25rem;
+  }
 }
 .section-main {
   background-image: url(../img/files/image.png);
@@ -35,6 +38,9 @@ body {
   @media (max-width: 576px) {
     min-height: 450px;
   }
+  @media (max-width: 320px) {
+    height: 454px;
+  }
 }
 .main {
   max-width: 835px;
@@ -42,6 +48,9 @@ body {
   margin-top: 173px;
   @media (max-width: 576px) {
     margin-top: 83px;
+  }
+  @media (max-width: 320px) {
+    margin-top: 44px;
   }
   &-title {
     color: #ffffff;
@@ -56,6 +65,10 @@ body {
       text-align: center;
       margin: 0 auto;
     }
+    @media (max-width: 320px) {
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
   &-text {
     max-width: 530px;
@@ -66,6 +79,13 @@ body {
     margin: 0 auto;
     margin-top: 36px;
     text-align: center;
+    font-size: 12px;
+    @media (max-width: 320px) {
+      width: 264px;
+      line-height: 1.5;
+      margin: 0 auto;
+      margin-top: 11px;
+    }
   }
   &-btn {
     padding: 23px 50px;
@@ -78,6 +98,13 @@ body {
     color: #000;
     letter-spacing: 3.5px;
     transition: 0.3s ease;
+    @media (max-width: 320px) {
+      font-size: 0.87rem;
+      letter-spacing: 2.5px;
+      margin: 0 auto;
+      margin-top: 38px;
+      padding: 17px 27px;
+    }
     &:hover {
       color: #827686;
     }
@@ -90,6 +117,12 @@ body {
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 32px;
+  @media (max-width: 320px) {
+    flex-wrap: wrap;
+    margin-top: 22px;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+  }
   select {
     width: 325px;
     height: 60px;
@@ -98,6 +131,11 @@ body {
     outline: none;
     @media (max-width: 576px) {
       width: 243px;
+    }
+    @media (max-width: 320px) {
+      width: 288px;
+      height: 39px;
+      margin-bottom: 11px;
     }
   }
   option {
@@ -121,10 +159,19 @@ body {
   border: 1px solid #000;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 320px) {
+    width: 282px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 0.75rem;
+  }
 }
 .area-text {
   width: 241px;
   text-align: center;
+  @media (max-width: 320px) {
+    width: 175px;
+  }
 }
 .area-input {
   width: 241px;
@@ -133,6 +180,9 @@ body {
   border: none;
   border-left: 1px solid #000;
   text-align: center;
+  @media (max-width: 320px) {
+    height: 37px;
+  }
   &::-webkit-input-placeholder { color: #000;}
   &:hover {
     &::-webkit-input-placeholder { color: #827686;}
@@ -143,6 +193,9 @@ body {
   margin-top: 131px;
   @media (max-width: 576px) {
     margin-top: 60px;
+  }
+  @media (max-width: 320px) {
+    margin-top: 54px;
   }
   &__text {
     font-weight: 400;
@@ -155,6 +208,13 @@ body {
     overflow: hidden;
     @media (max-width: 576px) {
       max-width: 479px;
+    }
+    @media (max-width: 320px) {
+      font-size: 0.75rem;
+      margin: 0 auto;
+      font-size: 0.75rem;
+      width: 264px;
+      margin-top: 17px;
     }
   }
 }
@@ -170,12 +230,20 @@ body {
   @media (max-width: 768px) {
     margin-top: 70px;
   }
+  @media (max-width: 320px) {
+    margin-top: 40px;
+  }
   &-child {
     width: 462px;
     height: 544px;
     border: 1px solid #302d32;
     overflow: hidden;
     margin-right: 19px;
+    @media (max-width: 320px) {
+      width: 281px;
+      height: 428px;
+      margin-right: 1px;
+    }
   }
   &-item {
     width: 100%;
@@ -185,6 +253,9 @@ body {
     background-position: center;
     background-size: cover;
     transition: 0.3s ease;
+    @media (max-width: 320px) {
+      height: 260px;
+    }
     &:hover {
       width: 105%;
     }
@@ -204,13 +275,22 @@ body {
     top: 308px;
     left: 31px;
     line-height: 1;
+    @media (max-width: 320px) {
+      color: #000;
+      top: 278px;
+      left: 12px;
+    }
     &__title {
       font-weight: bold;
       font-size: 1.87rem;
+      @media (max-width: 320px) {
+        font-size: 1.12rem;
+      }
     }
     &__description {
       font-weight: 400;
       font-style: 1rem;
+      font-size: 0.75rem;
     }
   }
   &__btn {
@@ -227,6 +307,9 @@ body {
       bottom: 11px;
       border: none;
       transition: 0.3s ease;
+      @media (max-width: 320px) {
+        display: none;
+      }
       &:hover {
         background-color: #827685;
       }
@@ -235,6 +318,10 @@ body {
 
 .info {
   display: flex;
+  @media (max-width: 320px) {
+    font-size: 0.75rem;
+    margin-top: 47px;
+  }
   &-col {
     display: flex;
     &__item {
@@ -243,12 +330,20 @@ body {
       align-items: center;
       margin-top: 32px;
       margin-left: 28px;
+      @media (max-width: 320px) {
+        margin-left: 15px;
+        width: 14px;
+        height: 14px;
+      }
     }
     &__text {
       margin-top: 35px;
       margin-left: 16px;
       @media (max-width: 768px) {
         margin-left: 1px;
+      }
+      @media (max-width: 320px) {
+        margin-left: 10px;
       }
     }
   }
@@ -260,12 +355,20 @@ body {
   color: #000;
   margin-top: 5px;
   margin-left: 30px;
+  @media (max-width: 320px) {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
 }
 
 .section-catalog {
   margin-top: 150px;
   @media (max-width: 576px) {
     margin-top: 70px;
+  }
+  @media (max-width: 320px) {
+    margin-top: 92px;
   }
 }
 .catalog {
@@ -276,12 +379,24 @@ body {
   @media (max-width: 1200px) {
     justify-content: space-around;
   }
+  @media (max-width: 320px) {
+    margin-top: 36px;
+  }
   &-child {
     width: 462px;
     height: 544px;
     border: 1px solid #302d32;
     overflow: hidden;
     margin-bottom: 20px;
+    @media (max-width: 320px) {
+      width: 287px;
+      height: 427px;
+      &.none {
+        @media (max-width: 320px) {
+          display: none;
+        }
+      }
+    }
   }
   &-item {
     width: 100%;
@@ -291,6 +406,9 @@ body {
     background-position: center;
     background-size: cover;
     transition: 0.3s ease;
+    @media (max-width: 320px) {
+      height: 258px;
+    }
     &:hover {
       width: 105%;
     }
@@ -319,13 +437,24 @@ body {
     top: 308px;
     left: 31px;
     line-height: 1;
+    @media (max-width: 320px) {
+      color: #000;
+      top: 278px;
+      left: 14px;
+    }
     &__title {
       font-weight: bold;
       font-size: 1.87rem;
+      @media (max-width: 320px) {
+        font-size: 1.12rem;
+      }
     }
     &__description {
       font-weight: 400;
       font-style: 1rem;
+      @media (max-width: 320px) {
+        font-size: 0.75rem;
+      }
     }
   }
   &__btn {
@@ -361,6 +490,10 @@ body {
   opacity: 0.8;
   transition: 0.3s ease;
   cursor: pointer;
+  @media (max-width: 320px) {
+    font-size: 0.81rem;
+    margin-top: 7px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -372,6 +505,12 @@ body {
     background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAqklEQVQYlV3QsUqCcRSG8Z/WoIsgQml0CQriVehFOOSQS0RrQhcgOjsJzg1uTiIubt6AOIe0NrYlB74v/vqsz+Gc97yFdquzxRIz/Em4qd83vvGGB+zSgVus8YMpqnjHb8hiNrTHEM1sfSWVwQED1DDHXSqDLzyhjMW1DLpoYBWBcgp4QR8TfOYyNnyghxE2+SsljNHGa5b8/8+I/ohnHNPjIaOVKOJ0EQtnaqAcL+nLxPcAAAAASUVORK5CYII=");
     background-size: cover;
     background-repeat: no-repeat;
+    @media (max-width: 320px) {
+      top: 4px;
+      left: 114px;
+      width: 5px;
+      height: 9px;
+    }
   }
   &:hover {
     opacity: 1;
@@ -385,7 +524,7 @@ body {
 .section-plan {
   margin-top: 151px;
   @media (max-width: 576px) {
-    margin-top: 70px;
+    margin-top: 75px;
   }
   &__text {
     font-weight: 400;
@@ -395,6 +534,10 @@ body {
     margin: 0 auto;
     margin-top: 25px;
     line-height: 1.5;
+    @media (max-width: 320px) {
+      width: 291px;
+      margin-top: 11px;
+    }
   }
   &__item {
     background-image: url(../img/image-8.png);
@@ -403,6 +546,11 @@ body {
     margin: 0 auto;
     margin-top: 65px;
     margin-left: -7px;
+    @media (max-width: 320px) {
+      margin-top: 32px;
+      margin-left: 0;
+      height: 255px;
+    }
   }
 }
 
@@ -412,6 +560,9 @@ body {
     margin: 0 auto;
     margin-top: 82px;
     max-width: 765px;
+    @media (max-width: 320px) {
+      margin-top: 25px;
+    }
   .click {
     font-weight: 500;
     font-size: 18px;
@@ -422,6 +573,12 @@ body {
     transition: 0.3s ease;
     @media (max-width: 576px) {
       margin-left: 12px;
+    }
+    @media (max-width: 320px) {
+      font-size: 0.62rem;
+      letter-spacing: 1px;
+      margin-left: 22px;
+      margin-right: 0px;
     }
     &:hover {
       color: #827685;
@@ -438,6 +595,11 @@ body {
     @media (max-width: 576px) {
       left: 250px;
     }
+    @media (max-width: 320px) {
+      left: 152px;
+      height: 15px;
+      top: 5px;
+    }
   }
 }
 
@@ -445,6 +607,9 @@ body {
   margin-top: 152px;
   @media (max-width: 576px) {
     margin-top: 70px;
+  }
+  @media (max-width: 320px) {
+    margin-top: 55px;
   }
 }
 .about-cart {
@@ -478,16 +643,28 @@ body {
   }
 }
 
+.corrected {
+  @media (max-width: 320px) {
+    margin-top: 14px;
+  }
+}
+
 .section-news {
   margin-top: 175px;
   @media (max-width: 576px) {
     margin-top: 70px;
+  }
+  @media (max-width: 320px) {
+    margin-top: 93px;
   }
 }
 .slider-news {
     width: 461px;
     height: 398px;
     border: 1px solid #000;
+    @media (max-width: 320px) {
+      height: 249px;
+    }
     &:hover {
       background-image: url(../img/image-9.png);
       color: #fff;
@@ -499,12 +676,20 @@ body {
       @media (max-width: 990px) {
         margin-top: 70px;
       }
+      @media (max-width: 320px) {
+        margin-top: 77px;
+        margin-left: 11px;
+      }
     }
     &__text {
       font-size: 1rem;
       margin-left: 29px;
       margin-top: 0;
       line-height: 1.5;
+      @media (max-width: 320px) {
+        font-size: 0.72rem;
+        margin-left: 10px;
+      }
     }
 }
 .download {
@@ -514,6 +699,9 @@ body {
     margin-left: 23px;
     margin-top: 8px;
     background: transparent;
+    @media (max-width: 320px) {
+      font-size: 0.75rem;
+    }
     &:hover {
       color: #fff;
     }
@@ -528,6 +716,10 @@ body {
       background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAqklEQVQYlV3QsUqCcRSG8Z/WoIsgQml0CQriVehFOOSQS0RrQhcgOjsJzg1uTiIubt6AOIe0NrYlB74v/vqsz+Gc97yFdquzxRIz/Em4qd83vvGGB+zSgVus8YMpqnjHb8hiNrTHEM1sfSWVwQED1DDHXSqDLzyhjMW1DLpoYBWBcgp4QR8TfOYyNnyghxE2+SsljNHGa5b8/8+I/ohnHNPjIaOVKOJ0EQtnaqAcL+nLxPcAAAAASUVORK5CYII=");
       background-size: cover;
       background-repeat: no-repeat;
+      @media (max-width: 320px) {
+        top: 3px;
+        left: 177px;
+      }
     }
   }
 }
@@ -538,6 +730,13 @@ body {
   @media (max-width: 768px) {
     margin-bottom: 20px;
   }
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+  @media (max-width: 320px) {
+    width: 332px;
+    margin-top: 11px;
+  }
 }
 
 
@@ -545,12 +744,19 @@ datalist {
   width: 385px;
  display: flex;
  justify-content: space-between;
- }
+ @media (max-width: 320px) {
+  width: 275px;
+  }
+}
  
  #tickmarks option {
  display: inline;
  font-size: 1rem;
+ @media (max-width: 320px)  {
+   font-size: 0.75rem;
  }
+}
+
  
  .range-style {
    -webkit-appearance: none;
@@ -558,6 +764,9 @@ datalist {
    height: 2px;
    background: #e4e4e4;
    outline: none; 
+   @media (max-width: 320px) {
+     width: 275px;
+   }
  }
  
  .range-style::-webkit-slider-thumb {
@@ -581,6 +790,12 @@ datalist {
    display: flex;
    justify-content: space-between;
    margin-top: 36px;
+   @media (max-width: 320px) {
+     width: 300px;
+     flex-wrap: wrap;
+     margin: 0 auto;
+     margin-top: 18px;
+   }
  }
  .reset {
    position: relative;
@@ -590,6 +805,10 @@ datalist {
    border: none;
    padding-left: 49px;
    outline: none;
+   @media (max-width: 320px) {
+     margin: 0 auto;
+     padding-left: 0;
+   }
    cursor: pointer;
    transition: 0.3s ease;
    &:hover {
@@ -604,7 +823,10 @@ datalist {
      height: 10px;
      left: 200px;
      top: 24px;
-
+     @media (max-width: 320px) {
+       left: 147px;
+       top: 6px;
+     }
    }
  }
  .submit {
@@ -620,6 +842,13 @@ datalist {
    cursor: pointer;
    border: none;
    transition: 0.3s ease;
+   @media (max-width: 320px) {
+    margin: 0 auto;
+    margin-top: 28px;
+    width: 170px;
+    height: 52px;
+    font-size: 0.87rem;
+   }
    &:hover {
      background-color: #827685;
    }
@@ -637,6 +866,10 @@ datalist {
    width: 7px;
    height: 12px;
    outline: none;
+   @media (max-width: 320px) {
+     top: -30px;
+     display: none;
+   }
  }
  .slick-prev {
    right: 55px;
