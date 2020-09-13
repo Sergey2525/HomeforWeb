@@ -72,22 +72,10 @@
                             <input class="area-input" placeholder="____________м2" type="number">
                         </div>
                         <div class="inlin">
-                            <input class="range-style" list="tickmarks" type="range" min="0" max="1000" step="1"
-                                value="0">
-
-                            <datalist id="tickmarks">
-                                <option value="0" label="0">
-                                <option value="100">
-                                <option value="200">
-                                <option value="300">
-                                <option value="120" label="120">
-                                <option value="500">
-                                <option value="600">
-                                <option value="700">
-                                <option value="800">
-                                <option value="900">
-                                <option value="1000" label="1000">
-                            </datalist>
+                            <div>
+                                <label for="range"></label>
+                                <input type="range" value="120" min="0" max="1000">
+                              </div>
                         </div>
                     </div>
                     <div>
@@ -96,22 +84,10 @@
                             <input class="area-input" placeholder="____________тыс." type="number">
                         </div>
                         <div class="inlin">
-                            <input class="range-style" list="tickmarks" type="range" min="0" max="98000" step="1"
-                                value="0">
-
-                            <datalist id="tickmarks">
-                                <option value="0" label="0">
-                                <option value="8000">
-                                <option value="9000">
-                                <option value="10000">
-                                <option value="10350" label="10350">
-                                <option value="49000">
-                                <option value="60000">
-                                <option value="70000">
-                                <option value="80000">
-                                <option value="90000">
-                                <option value="98000" label="98000">
-                            </datalist>
+                            <div>
+                                <label for="range"></label>
+                                <input type="range" value="10350" min="0" max="98000">
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -599,6 +575,75 @@
             </div>
         </div>
     </section>
+
+    <script>
+         /* Overwrite style of slider in Chrome and other webkit browsers to fill track color */
+
+
+	window.onload = function() {		
+		var elm = document.querySelectorAll('input[type=range]');
+		for(var i  = 0; i < elm.length; i++)
+		{
+          if (typeof Event === "function") {
+      var event = new Event("input");
+    } else {
+      var event = document.createEvent("Event");
+      event.initEvent("input", true, true);
+    }
+      //CustomEvent may not work in IE
+     // var event = new CustomEvent('input');
+			elm[i].dispatchEvent(event);
+		}
+	};
+
+var r = document.querySelectorAll('input[type=range]'), 
+    prefs = ['webkit-slider-runnable', 'moz-range', 'ms-track'], 
+    styles = [], 
+    l = prefs.length,
+    n = r.length;
+
+var getTrackStyleStr = function(el, j) {
+  var str = '', 
+      min = el.min || 0, 
+      perc = (el.max) ? ~~(100*(el.value - min)/(el.max - min)) : el.value, 
+      val = perc + '% 100%';
+
+  //set output value. Could use psuedo before instead of output, but could not position
+ el.previousElementSibling.textContent = el.value;
+
+
+  //move output with slider position
+
+  if (el.max > 1){
+     el.previousElementSibling.style.left = (el.value/(el.max*1.06) * el.scrollWidth) + 'px';
+  } else {
+  el.previousElementSibling.style.left = (el.value/110 * el.scrollWidth) + 'px';
+    }
+
+  console.dir(el);
+  
+  
+  for(var i = 0; i < l; i++) {
+    str += "input[type=range][data-rangeId='" + j + "']::-" + prefs[i] + '-track{background-size:' + val + '} ';
+  }
+  return str;
+};
+
+
+var setDragStyleStr = function(evt) {
+  var trackStyle = getTrackStyleStr(evt.target, this); 
+  styles[this].textContent = trackStyle;
+};
+
+for(var i = 0; i < n; i++) {
+  var s = document.createElement('style');
+  document.body.appendChild(s);
+  styles.push(s);
+  r[i].setAttribute('data-rangeId', i);
+  r[i].addEventListener('input', setDragStyleStr.bind(i));
+}
+
+    </script>
 
     @@include("../blocks/modules/footer/footer.html")
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

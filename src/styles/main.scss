@@ -751,9 +751,10 @@ body {
   }
 }
 
+
 .inlin {
-  margin-left: 50px;
-  margin-top: 20px;
+  margin-left: 0px;
+  margin-top: 0px;
   @media (max-width: 768px) {
     margin-bottom: 20px;
   }
@@ -765,7 +766,6 @@ body {
     margin-top: 11px;
   }
 }
-
 
 datalist {
   width: 385px;
@@ -790,16 +790,20 @@ datalist {
    width: 366px;
    height: 2px;
    background: #e4e4e4;
-   outline: none; 
+   outline: none;
    @media (max-width: 320px) {
      width: 275px;
    }
  }
+
+ .rang-style::-moz-range-track {
+  background: linear-gradient(#000, #000) no-repeat #757575;
+ }
  
  .range-style::-webkit-slider-thumb {
    -webkit-appearance: none;
-   width: 12px;
-   height: 12px;
+   width: 8px;
+   height: 8px;
    border: 1px solid #dae3ea;
    background: white;
    border-radius: 2px;
@@ -809,7 +813,6 @@ datalist {
    transition: all 0.3s;
    background: #000;
  }
- 
 
  .but {
    width: 460px;
@@ -906,3 +909,105 @@ datalist {
    right: 5px;
    background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAqklEQVQYlV3QsUqCcRSG8Z/WoIsgQml0CQriVehFOOSQS0RrQhcgOjsJzg1uTiIubt6AOIe0NrYlB74v/vqsz+Gc97yFdquzxRIz/Em4qd83vvGGB+zSgVus8YMpqnjHb8hiNrTHEM1sfSWVwQED1DDHXSqDLzyhjMW1DLpoYBWBcgp4QR8TfOYyNnyghxE2+SsljNHGa5b8/8+I/ohnHNPjIaOVKOJ0EQtnaqAcL+nLxPcAAAAASUVORK5CYII=");
  }
+
+
+ 
+input[type='range'] {
+  display: block;
+  margin: 0.2em auto;
+  border: solid .5em transparent;
+  padding: 0;
+  width: 380px;
+  height: 1em;
+  border-radius: .25em;
+  background: transparent;
+  font-size: 1em;
+  cursor: pointer;
+  touch-action: none;
+}
+input[type='range'], 
+input[type='range']::-webkit-slider-runnable-track, 
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 15.5em;
+  height: 0.1em;
+  border-radius: 0.25em;
+  background: #000;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: linear-gradient(#000, #000) no-repeat #d6d5d6;
+}
+input[type='range']::-moz-range-track {
+  width: 15.5em;
+  height: 0.3em;
+  border-radius: 0.25em;
+  background: #000;
+}
+input[type='range']::-moz-range-track {
+  background: linear-gradient(#000, #000) no-repeat #d6d5d6;
+}
+input[type='range']::-ms-track {
+  border: none;
+  width: 15.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  background: #d6d5d6;
+  color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+  border-radius: 0.25em;
+  background: #000;
+}
+
+/* Would prefer to find a way to automatically set background size based on range values on page load */
+
+input[type='range']::-webkit-slider-runnable-track {
+  background-size: 0% 100%;
+}
+
+input[type='range']::-moz-range-track {
+  background-size: 0% 100%;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -0.125em;
+  border: none;
+  width: 0.5em;
+  height: 0.5em;
+  /*box-shadow: 0 0 0.125em #333;*/
+  background: #000;
+}
+input[type='range']::-moz-range-thumb {
+  border: none;
+  width: 0.5em;
+  height: 0.5em;
+ /* box-shadow: 0 0 0.125em #333;*/
+  background: #000;
+}
+input[type='range']::-ms-thumb {
+  border: none;
+  width: 0.5em;
+  height: 0.5em;
+  /*box-shadow: 0 0 0.125em #333;*/
+  background: #000;
+}
+input[type='range']::-ms-tooltip {
+  display: none;
+}
+input[type='range']:focus {
+  outline: none;
+ /* box-shadow: 0 0 0.25em #e44e4f;*/
+}
+
+label[for='range'] {
+  position: relative;
+  top: 45px;
+  width: 380px;
+  font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  font-size: 16px;
+  color: black;
+  display: block;
+  margin: 0 auto;
+}
