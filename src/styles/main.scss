@@ -188,6 +188,10 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  @media (max-width: 1024px) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 .area {
   display: flex;
@@ -232,6 +236,9 @@ body {
 .section-stock {
   position: relative;
   margin-top: 131px;
+  @media (max-width: 1366px) {
+    margin-left: 10px;
+  }
   @media (max-width: 576px) {
     margin-top: 60px;
   }
@@ -420,6 +427,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 83px;
+  @media (max-width: 1366px) {
+    justify-content: space-around;
+  }
   @media (max-width: 1200px) {
     justify-content: space-around;
   }
@@ -722,6 +732,9 @@ body {
 .section-news {
   position: relative;
   margin-top: 175px;
+  @media (max-width: 1366px) {
+    margin-left: 5px;
+  }
   @media (max-width: 576px) {
     margin-top: 70px;
   }
@@ -1094,9 +1107,15 @@ label[for='range'] {
   width: 1305px;
   height: 1px;
   background: #c0c0c1;
+  @media (max-width: 1366px) {
+    width: 1230px;
+  }
   @media (max-width: 1200px) {
     width: 1010px;
     margin-left: 10px;
+  }
+  @media (max-width: 1024px) {
+    width: 850px;
   }
   @media (max-width: 990px) {
     width: 800px;
@@ -1113,9 +1132,15 @@ label[for='range'] {
   height: 1.5px;
   background: #000;
   z-index: 1;
+  @media (max-width: 1366px) {
+    width: 425px;
+  }
   @media (max-width: 1200px) {
     width: 355px;
     margin-left: 10px;
+  }
+  @media (max-width: 1024px) {
+    width: 290px;
   }
   @media (max-width: 990px) {
     width: 440px;
@@ -1131,9 +1156,15 @@ label[for='range'] {
   width: 1305px;
   height: 1px;
   background: #c0c0c1;
+  @media (max-width: 1366px) {
+    width: 1230px;
+  }
   @media (max-width: 1200px) {
     width: 1050px;
     margin-left: 10px;
+  }
+  @media (max-width: 1024px) {
+    width: 850px;
   }
   @media (max-width: 990px) {
     width: 800px;
@@ -1150,9 +1181,15 @@ label[for='range'] {
   height: 1.5px;
   background: #000;
   z-index: 1;
+  @media (max-width: 1366px) {
+    width: 435px;
+  }
   @media (max-width: 1200px) {
     width: 370px;
     margin-left: 10px;
+  }
+  @media (max-width: 1024px) {
+    width: 300px;
   }
   @media (max-width: 990px) {
     width: 350px;
@@ -1188,6 +1225,10 @@ label[for='range'] {
   position: absolute;
   top: 457px;
   left: 96px;
+  @media (max-width: 576px) {
+    top: 570px;
+    left: 170px;
+  }
 }
 .slick-dots > li {
   width: 7px;
@@ -1206,5 +1247,9 @@ label[for='range'] {
     position: absolute;
     top: 280px;
     left: 96px;
+    @media (max-width: 576px) {
+      top: 420px;
+      left: 150px;
+    }
   }
 }
