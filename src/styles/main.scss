@@ -1229,6 +1229,10 @@ label[for='range'] {
     top: 570px;
     left: 170px;
   }
+  @media (max-width: 320px) {
+    top: 457px;
+    left: 96px;
+  }
 }
 .slick-dots > li {
   width: 7px;
@@ -1250,6 +1254,10 @@ label[for='range'] {
     @media (max-width: 576px) {
       top: 420px;
       left: 150px;
+    }
+    @media (max-width: 320px) {
+      top: 280px;
+      left: 96px;
     }
   }
 }
