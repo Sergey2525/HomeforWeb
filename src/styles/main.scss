@@ -736,6 +736,7 @@ body {
     border: 1px solid #000;
     @media (max-width: 320px) {
       height: 249px;
+      margin: 0 15px;
     }
     &:hover {
       background-image: url(../img/image-9.png);
@@ -1186,7 +1187,7 @@ label[for='range'] {
   text-indent: -9999px;
   position: absolute;
   top: 457px;
-  left: 76px;
+  left: 96px;
 }
 .slick-dots > li {
   width: 7px;
@@ -1194,4 +1195,16 @@ label[for='range'] {
   background: #27300f;
   margin-right: 6px;
   margin-left: 6px;
+}
+
+.corrected {
+  .slick-dots {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    text-indent: -9999px;
+    position: absolute;
+    top: 280px;
+    left: 96px;
+  }
 }
