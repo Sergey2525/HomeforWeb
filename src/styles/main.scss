@@ -69,6 +69,10 @@ body {
       font-size: 20px;
       line-height: 1.5;
     }
+    @media (max-width: 320px) {
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
   &-text {
     max-width: 530px;
@@ -80,6 +84,12 @@ body {
     margin-top: 36px;
     text-align: center;
     font-size: 16px;
+    @media (max-width: 414px) {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 auto;
+      margin-top: 11px;
+    }
     @media (max-width: 320px) {
       width: 264px;
       font-size: 12px;
@@ -139,6 +149,7 @@ body {
     @media (max-width: 576px) {
       width: 243px;
     }
+   
     @media (max-width: 320px) {
       width: 288px;
       height: 39px;
@@ -256,6 +267,9 @@ body {
     overflow: hidden;
     @media (max-width: 576px) {
       max-width: 479px;
+    }
+    @media (max-width: 414px) {
+      max-width: 410px;
     }
     @media (max-width: 320px) {
       font-size: 0.75rem;
@@ -678,6 +692,9 @@ body {
   @media (max-width: 992px) {
     width: 990px;
   }
+  @media (max-width: 812px) {
+    width: 810px;
+  }
   @media (max-width: 768px) {
     width: 768px;
   }
@@ -685,6 +702,9 @@ body {
     width: 576px;
     display: flex;
     flex-wrap: wrap;
+  }
+  @media (max-width: 414px) {
+    width: 410px;
   }
   @media (max-width: 320px) {
     width: 300px;
@@ -1266,7 +1286,6 @@ label[for='range'] {
 .cottage {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 260px;
@@ -1276,6 +1295,7 @@ label[for='range'] {
   @media (max-width: 1670px) {
     left: 253px;
   }
+  
   @media (max-width: 1500px) {
     left: 170px;
   }
@@ -1284,6 +1304,27 @@ label[for='range'] {
   }
   @media (max-width: 1200px) {
     left: 10px;
+  }
+  @media (max-width: 1024px) {
+    left: 0;
+  }
+  @media (max-width: 992px) {
+    left: 0;
+    width: 175px;
+  }
+  @media (max-width: 768px) {
+    top: 400px;
+    width: 80px;
+  }
+  @media (max-width: 576px) {
+    display: none;
+  }
+  @media (max-width: 320px) {
+    display: block;
+    top: 166px;
+    left: 0px;
+    width: 44px;
+    height: 67px;
   }
   &-number {
     width: 150px;
@@ -1296,9 +1337,20 @@ label[for='range'] {
     background-color: #302d32;
     border-radius: 5px;
     opacity: 0;
+    @media (max-width: 320px) {
+      width: 50px;
+      margin-top: -10px;
+      font-size: 7px;
+      padding: 3px 2px;
+    }
     & p {
       margin-top: 0.5rem;
       margin-bottom: 0;
+    }
+    & p.text {
+      @media (max-width: 320px) {
+        display: none;
+      }
     }
   }
   &:hover .cottage-number {
@@ -1308,7 +1360,6 @@ label[for='range'] {
 .cottage__1 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 240px;
@@ -1327,6 +1378,27 @@ label[for='range'] {
   @media (max-width: 1200px) {
     left: 337px;
   }
+  @media (max-width: 1024px) {
+    left: 266px;
+  }
+  @media (max-width: 992px) {
+    left: 230px;
+  }
+  @media (max-width: 812px) {
+    left: 155px;
+  }
+  @media (max-width: 768px) {
+    left: 115px;
+  }
+  @media (max-width: 576px) {
+    left: 10px;
+  }
+  @media (max-width: 320px) {
+    top: 130px;
+    left: 53px;
+    width: 91px;
+    height: 47px;
+  }
   &-number {
     width: 150px;
     margin-top: -50px;
@@ -1338,6 +1410,12 @@ label[for='range'] {
     background-color: #302d32;
     border-radius: 5px;
     opacity: 0;
+    @media (max-width: 320px) {
+      width: 40px;
+      margin-top: -10px;
+      font-size: 8px;
+      padding: 5px 3px;
+    }
   }
   &:hover .cottage__1-number {
     opacity: 1;
@@ -1346,7 +1424,6 @@ label[for='range'] {
 .cottage__2 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 180px;
@@ -1365,6 +1442,27 @@ label[for='range'] {
   @media (max-width: 1200px) {
     left: 500px;
   }
+  @media (max-width: 1024px) {
+    left: 430px;
+  }
+  @media (max-width: 992px) {
+    left: 400px;
+  }
+  @media (max-width: 812px) {
+    left: 325px;
+  }
+  @media (max-width: 768px) {
+    left: 285px;
+  }
+  @media (max-width: 576px) {
+    left: 190px;
+  }
+  @media (max-width: 320px) {
+    left: 116px;
+    top: 39px;
+    width: 70px;
+    height: 30px;
+  }
   &-number {
     width: 150px;
     margin-top: -50px;
@@ -1376,6 +1474,12 @@ label[for='range'] {
     background-color: #302d32;
     border-radius: 5px;
     opacity: 0;
+    @media (max-width: 320px) {
+      width: 40px;
+      margin-top: -10px;
+      font-size: 8px;
+      padding: 5px 3px;
+    }
   }
   &:hover .cottage__2-number {
     opacity: 1;
@@ -1384,7 +1488,6 @@ label[for='range'] {
 .cottage__3 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 150px;
@@ -1403,6 +1506,31 @@ label[for='range'] {
   @media (max-width: 1200px) {
     left: 756px;
   }
+  @media (max-width: 1024px) {
+    left: 715px;
+  }
+  @media (max-width: 992px) {
+    left: 670px;
+  }
+  @media (max-width: 812px) {
+    left: 580px;
+  }
+  @media (max-width: 768px) {
+    left: 545px;
+  }
+  @media (max-width: 576px) {
+    left: 450px;
+  }
+  @media (max-width: 414px) {
+    display: none;
+  }
+  @media (max-width: 320px) {
+    display: block;
+    top: 47px;
+    height: 55px;
+    width: 80px;
+    left: 218px;
+  }
   &-number {
     width: 150px;
     margin-top: -50px;
@@ -1414,6 +1542,12 @@ label[for='range'] {
     background-color: #302d32;
     border-radius: 5px;
     opacity: 0;
+    @media (max-width: 320px) {
+      width: 40px;
+      margin-top: -10px;
+      font-size: 8px;
+      padding: 5px 3px;
+    }
   }
   &:hover .cottage__3-number {
     opacity: 1;
@@ -1422,7 +1556,6 @@ label[for='range'] {
 .cottage__4 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 150px;
@@ -1441,6 +1574,30 @@ label[for='range'] {
   @media (max-width: 1200px) {
     left: 595px;
   }
+  @media (max-width: 1024px) {
+    left: 527px;
+  }
+  @media (max-width: 992px) {
+    left: 500px;
+  }
+  @media (max-width: 812px) {
+    left: 420px;
+  }
+  @media (max-width: 768px) {
+    left: 380px;
+  }
+  @media (max-width: 576px) {
+    left: 288px;
+  }
+  @media (max-width: 414px) {
+    left: 218px;
+  }
+  @media (max-width: 320px) {
+    left: 151px;
+    top: 92px;
+    width: 66px;
+    height: 39px;
+  }
   &-number {
     width: 150px;
     margin-top: -50px;
@@ -1452,6 +1609,12 @@ label[for='range'] {
     background-color: #302d32;
     border-radius: 5px;
     opacity: 0;
+    @media (max-width: 320px) {
+      width: 40px;
+      margin-top: -10px;
+      font-size: 8px;
+      padding: 5px 3px;
+    }
   }
   &:hover .cottage__4-number {
     opacity: 1;
@@ -1460,7 +1623,6 @@ label[for='range'] {
 .cottage__5 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 150px;
@@ -1474,10 +1636,10 @@ label[for='range'] {
     left: 1312px;
   }
   @media (max-width: 1366px) {
-    left: 1195px;
+    left: 1216px;
   }
   @media (max-width: 1200px) {
-    opacity: 0;
+    display: none;
   }
   &-number {
     width: 150px;
@@ -1498,7 +1660,6 @@ label[for='range'] {
 .cottage__6 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 150px;
@@ -1516,6 +1677,12 @@ label[for='range'] {
   }
   @media (max-width: 1200px) {
     width: 70px;
+  }
+  @media (max-width: 1024px) {
+    display: none;
+  }
+  @media (max-width: 992px) {
+    display: none;
   }
   &-number {
     width: 150px;
@@ -1536,7 +1703,6 @@ label[for='range'] {
 .cottage__7 {
   position: absolute;
   display: block;
-  background-color: rgba(192, 192, 193, 0.3);
   cursor: pointer;
   text-decoration: none;
   width: 150px;
@@ -1555,6 +1721,28 @@ label[for='range'] {
   @media (max-width: 1200px) {
     left: 227px;
   }
+  @media (max-width: 1024px) {
+    left: 155px;
+  }
+  @media (max-width: 992px) {
+    left: 125px;
+  }
+  @media (max-width: 812px) {
+    left: 70px;
+  }
+  @media (max-width: 768px) {
+    left: 17px;
+  }
+  @media (max-width: 576px) {
+    left: 0;
+    width: 100px;
+  }
+  @media (max-width: 320px) {
+    top: 61px;
+    width: 70px;
+    height: 42px;
+    left: 4px;
+  }
   &-number {
     width: 150px;
     margin-top: -50px;
@@ -1566,6 +1754,12 @@ label[for='range'] {
     background-color: #302d32;
     border-radius: 5px;
     opacity: 0;
+    @media (max-width: 320px) {
+      width: 40px;
+      margin-top: -10px;
+      font-size: 8px;
+      padding: 5px 3px;
+    }
   }
   &:hover .cottage__7-number {
     opacity: 1;
