@@ -31,6 +31,15 @@
     line-height: 24px;
     margin-right: 100px;
     transition: 0.3s ease;
+    @media (max-width: 736px) {
+      margin-right: 60px;
+    }
+    @media (max-width: 667px) {
+      display: none;
+    }
+    @media (max-width: 640px) {
+      display: none;
+    }
     @media (max-width: 576px) {
       display: none;
     }
