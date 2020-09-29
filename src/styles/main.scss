@@ -1393,6 +1393,9 @@ label[for='range'] {
     top: 457px;
     left: 120px;
   }
+  @media (max-width: 360px) {
+    left: 90px;
+  }
   @media (max-width: 320px) {
     top: 457px;
     left: 80px;
@@ -1425,6 +1428,9 @@ label[for='range'] {
     @media (max-width: 375px) {
       top: 280px;
       left: 120px;
+    }
+    @media (max-width: 360px) {
+      left: 90px;
     }
     @media (max-width: 320px) {
       top: 280px;
